@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<import-steps>
+ <import-step 
+    id="TremPassagens-Create-tables" 
+    handler="trem.passagens.setuphandlers.createTables"
+    title="Creates tables"
+    version="2013-06-12T00:00:00.000000">
+   Creates relational database tables 
+ </import-step>
+</import-steps>
+
