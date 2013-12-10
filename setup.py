@@ -25,7 +25,12 @@ setup(name='trem.passagens',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
+          'sqlalchemy',
+          'z3c.saconfig',
+          'psycopg2',
+          'five.grok',
+          'plone.directives.form',
+           # -*- Extra requirements: -*-
       ],
       entry_points="""
       # -*- Entry points: -*-

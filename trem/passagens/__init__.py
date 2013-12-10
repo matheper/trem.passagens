@@ -1,4 +1,5 @@
 # -*- extra stuff goes here -*-
+from trem.passagens import tables
 
 
 def initialize(context):
