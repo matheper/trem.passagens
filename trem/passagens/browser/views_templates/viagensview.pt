@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="workflow.validation">
+
+<body>
+
+<metal:main fill-slot="main">
+        <h1 class="documentFirstHeading">Viagens</h1>
+
+        <p class="documentDescription">Horários</p>
+
+        <p>
+            <a tal:attributes="href string:${view/add_url}">Adicionar</a>
+        </p>
+
+        <div>
+            <table class="listing" id="table-list-papel" width="100%">
+                <thead>
+                    <tr>
+                        <th>Origem</th>
+                        <th>Destino</th>
+                        <th>Horário da Partida</th>
+                </thead>
+                <tbody>
+                    <tr tal:repeat="local view/dados">
+                        <a tal:attributes="href python:view.show_url(local['origem'])">
+                            <td>
+                                <span tal:content="local/origem">Origem</span>
+                            </td>
+                            <td>
+                                <span tal:content="local/destino">Destino</span>
+                            </td>
+                            <td>
+                                <span tal:content="local/horario">Horario</span>
+                            </td>
+                        </a>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</metal:main>
+
+</body>
+</html>
